@@ -3,23 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Acerca de</title>
     <style>
+
+
         .mititulo{
             font-weight: bold   ;
-            font-size: 2em /* 16 px *1 */;
-            color: rgb(255, 255, 255) ;
-            text-align: center;
-            vertical-align: text-bottom;
-            text-transform:uppercase;
-            letter-spacing: 10px;
-            text-shadow: 3px 2px #0816d4;
-            background-color: rgb(7, 10, 49);
-            border: 3px rgb(42, 100, 224) solid;
-            padding: 20px 10px;
-            margin-bottom: 50px;
+            font-size: 1.5 em /* 16 px *1 */;
+            color: rgb(235, 23, 23) ;
+            text-align: left;
+            vertical-align: middle;
+            text-transform: capitalize;
+            letter-spacing: 5px;
+            border: 5px;
+            /*text-shadow: 3px 2px #373d96;*/
+            /*background-color: rgb(10, 7, 49);*/
+            border: 3px rgb(14, 13, 13) solid;
+            padding: 10px 30px 20px 40px;
+            /*margin-bottom: 50px;*/
+            margin: 20px 30px 70px 30px;
             outline-style: solid;
-            outline-color: rgb(54, 10, 104);
+            /*outline-color: rgb(12, 10, 104);*/
             outline-width: 5px;
 
         }
@@ -27,6 +31,64 @@
             font-size: 0.9em;
             text-align: justify;
             text-decoration: underline ;
+            text-indent: 20px;
+        }
+        table, td, tr, th {
+            border: 1px solid;
+            width: 100%;
+        }
+        table{
+            border-collapse: collapse;
+        }
+        th{
+            height: 50px;
+            text-align: center;
+            color: white;
+            vertical-align: middle;
+            background-color: black;
+        }
+        td{
+           /* padding-left: 10px;
+            padding-right: 20px;*/
+            padding: 15px;
+        }
+        td:hover{
+           /* padding-left: 10px;
+            padding-right: 20px;*/
+            background-color: brown;
+        }
+        tr:nth-child(even){
+            background-color: rgb(171, 233, 233);
+
+        }
+        tr:nth-child(odd){
+            background-color: rgb(180, 162, 221);
+
+        }
+        a:hover{
+            color: rgb(190, 85, 85);
+        }
+        a:visited{
+            color: rgb(102, 190, 85);
+        }
+        a:link{
+            color: rgb(85, 87, 190);
+        }
+        span:first-child{
+            background-color: blue;
+        }
+        p::first-letter{
+            font-size: 20px;
+        }
+        p::first-line{
+           color: rgb(155, 216, 216);
+        }
+        .micombinado>p{
+            background-color: darkolivegreen;
+
+        }
+        a [target="_blank"]{
+            background-color: yellow;
         }
     </style>
 </head>
@@ -39,8 +101,45 @@
         quo odio porro ipsa omnis explicabo ad, sed natus impedit commodi animi dolorum ut consequuntur 
         obcaecati qui quos aliquid consectetur. Dolores, alias nesciunt assumenda pariatur perspiciatis 
         quae architecto nihil numquam iusto? Pariatur blanditiis corporis veniam sint, earum ipsam aliquid 
-        magnam consequatur perspiciatis! Quibusdam animi doloremque aliquid, dolorem quae corporis ad atque 
-        autem quisquam modi aspernatur tempora deserunt iure doloribus, illo quis voluptates officia.
+        magnam consequatur perspiciatis! Quibusdam animi doloremque aliquid, dolorem quae corporis ad atque autem quisquam modi aspernatur tempora deserunt iure doloribus, illo quis voluptates officia.
     </p>
+    <div style="width: 70%;">
+        <table>
+            <tr>
+                <th>Nombre</th>
+                <th>Correo</th>
+                <th>Tel&eacute;fono</th>
+            </tr>
+            <tr>
+                <td>Joe Done</td>
+                <td>joe.doe@example.com</td>
+                <td>+5933535356</td>
+            </tr>
+            <tr>
+                <td>Joan Done</td>
+                <td>joan.doe@example.com</td>
+                <td>+5933535356</td>
+            </tr>
+            <tr>
+                <td>Joan Done</td>
+                <td>joan.doe@example.com</td>
+                <td>+5933535356</td>
+            </tr>
+            <tr>
+                <td>Joan Done</td>
+                <td>joan.doe@example.com</td>
+                <td>+5933535356</td>
+            </tr>
+        </table>
+    </div>
+
+    <a href="https://es.wikipedia.org/wiki/Wikipedia:Portada" target="_blank">Mis otros productos</a>
+    <br />
+    <div class="micombinado">
+        <p>Texto dentro del contenedor</p>
+        <h1>Cabecera</h1>
+
+    </div>
+
 </body>
 </html>
