@@ -1,114 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acerca de</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
-
-
-        .mititulo{
-            font-weight: bold   ;
-            font-size: 1.5 em /* 16 px *1 */;
-            color: rgb(235, 23, 23) ;
-            text-align: left;
-            vertical-align: middle;
-            text-transform: capitalize;
-            letter-spacing: 5px;
-            border: 5px;
-            /*text-shadow: 3px 2px #373d96;*/
-            /*background-color: rgb(10, 7, 49);*/
-            border: 3px rgb(14, 13, 13) solid;
-            padding: 10px 30px 20px 40px;
-            /*margin-bottom: 50px;*/
-            margin: 20px 30px 70px 30px;
-            outline-style: solid;
-            /*outline-color: rgb(12, 10, 104);*/
-            outline-width: 5px;
-
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            color: #495057;
         }
-        .mitexto{
-            font-size: 0.9em;
+
+        .mititulo {
+            font-weight: bold;
+            font-size: 2em;
+            color: #e91e63;
+            text-align: center;
+            letter-spacing: 2px;
+            padding: 10px;
+            margin: 20px 0;
+            background-color: #fff;
+            border: 2px solid #343a40;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .mitexto {
+            font-size: 1em;
             text-align: justify;
-            text-decoration: underline ;
             text-indent: 20px;
+            line-height: 1.5;
+            color: #333;
         }
-        table, td, tr, th {
-            border: 1px solid;
+
+        table {
             width: 100%;
-        }
-        table{
+            margin-top: 20px;
             border-collapse: collapse;
         }
-        th{
-            height: 50px;
-            text-align: center;
-            color: white;
-            vertical-align: middle;
-            background-color: black;
-        }
-        td{
-           /* padding-left: 10px;
-            padding-right: 20px;*/
+
+        th,
+        td {
             padding: 15px;
+            border: 1px solid #dee2e6;
         }
-        td:hover{
-           /* padding-left: 10px;
-            padding-right: 20px;*/
-            background-color: brown;
-        }
-        tr:nth-child(even){
-            background-color: rgb(171, 233, 233);
 
+        th {
+            background-color: #343a40;
+            color: #fff;
+            text-align: center;
         }
-        tr:nth-child(odd){
-            background-color: rgb(180, 162, 221);
 
+        td:hover {
+            background-color: #8a6d3b;
+            color: #fff;
         }
-        a:hover{
-            color: rgb(190, 85, 85);
-        }
-        a:visited{
-            color: rgb(102, 190, 85);
-        }
-        a:link{
-            color: rgb(85, 87, 190);
-        }
-        span:first-child{
-            background-color: blue;
-        }
-        p::first-letter{
-            font-size: 20px;
-        }
-        p::first-line{
-           color: rgb(155, 216, 216);
-        }
-        .micombinado>p{
-            background-color: darkolivegreen;
 
+        tr:nth-child(even) {
+            background-color: #d1ecf1;
         }
-        a [target="_blank"]{
-            background-color: yellow;
+
+        tr:nth-child(odd) {
+            background-color: #e9ecef;
+        }
+
+        a:hover {
+            color: #e91e63;
+        }
+
+        .micombinado>p {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        a[target="_blank"] {
+            background-color: #ffeb3b;
+            color: #333;
+            padding: 5px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        a[target="_blank"]:hover {
+            background-color: #ffea00;
         }
     </style>
 </head>
-<body>
-    <p id="titulo" class="mititulo">Acerca de</p> 
+
+<body class="container mt-5">
+    <p id="titulo" class="mititulo">Acerca de</p>
     <p class="mitexto">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque perspiciatis similique hic aspernatur 
-        numquam? Amet reprehenderit nemo ducimus inventore minima enim illum, aspernatur harum molestiae 
-        consequuntur ipsa obcaecati laborum fugiat officia voluptatem quam doloremque! Magni, ullam! Autem, 
-        quo odio porro ipsa omnis explicabo ad, sed natus impedit commodi animi dolorum ut consequuntur 
-        obcaecati qui quos aliquid consectetur. Dolores, alias nesciunt assumenda pariatur perspiciatis 
-        quae architecto nihil numquam iusto? Pariatur blanditiis corporis veniam sint, earum ipsam aliquid 
-        magnam consequatur perspiciatis! Quibusdam animi doloremque aliquid, dolorem quae corporis ad atque autem quisquam modi aspernatur tempora deserunt iure doloribus, illo quis voluptates officia.
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque perspiciatis similique hic aspernatur numquam?
+        Amet reprehenderit nemo ducimus inventore minima enim illum, aspernatur harum molestiae consequuntur ipsa
+        obcaecati laborum fugiat officia voluptatem quam doloremque! Magni, ullam! Autem, quo odio porro ipsa omnis
+        explicabo ad, sed natus impedit commodi animi dolorum ut consequuntur obcaecati qui quos aliquid consectetur.
+        Dolores, alias nesciunt assumenda pariatur perspiciatis quae architecto nihil numquam iusto? Pariatur blanditiis
+        corporis veniam sint, earum ipsam aliquid magnam consequatur perspiciatis! Quibusdam animi doloremque aliquid,
+        dolorem quae corporis ad atque autem quisquam modi aspernatur tempora deserunt iure doloribus, illo quis
+        voluptates officia.
     </p>
     <div style="width: 70%;">
-        <table>
+        <table class="table">
             <tr>
                 <th>Nombre</th>
                 <th>Correo</th>
-                <th>Tel&eacute;fono</th>
+                <th>Teléfono</th>
             </tr>
             <tr>
                 <td>Joe Done</td>
@@ -138,8 +141,13 @@
     <div class="micombinado">
         <p>Texto dentro del contenedor</p>
         <h1>Cabecera</h1>
-
     </div>
 
+    <!-- Agrega el script de Bootstrap al final del cuerpo del documento -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+
 </html>
+

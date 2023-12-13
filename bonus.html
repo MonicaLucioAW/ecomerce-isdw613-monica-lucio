@@ -1,70 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Productos Especiales </title>
+    <title>Productos Especiales</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
-        .class1{
-            display: block;
-            background-color: blue;
-            color: white;
-
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #d3dcdf;
+            color: #495057;
+            padding: 20px;
         }
+
+        .class1 {
+            display: block;
+            background-color: rgba(0, 255, 85, 0.384);
+            color: rgb(17, 32, 117);
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
         .container {
             display: flex;
-            /*flex-direction: row;
-            flex-wrap: wrap-reverse;*/
-            border: 1px solid;
             flex-flow: row wrap;
             justify-content: space-evenly;
             align-items: stretch;
-            height: 600px;
             gap: 10px;
         }
+
         .container>div {
-            width: 100px;
-            height: 100px;
+            flex-grow: 1;
             background-color: violet;
             color: wheat;
+            text-align: center;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+
         .container>div.larger {
-            width: 200px;
-            height: 200px;
-            background-color: red;
-            color: wheat;
-        }
-        .container>div.first{
-
             flex-grow: 2;
-
         }
-        .container>div.second{
-             flex-grow: 2;
 
+        .container>div.first,
+        .container>div.second {
+            flex-grow: 1;
         }
     </style>
 
 </head>
-<body>
-    Productos Especiales
-    <!--<div class="class1" > Parrafo 1</div>-->
-    
-    <div class="container" >
+
+<body class="container mt-5">
+    <h1 class="class1">Productos Especiales</h1>
+
+    <div class="container">
         <div>1</div>
         <div class="second">2</div>
         <div class="larger">3</div>
         <div class="first">4</div>
-        <!--
-        <div>5</div>
+         <!--<div>5</div>
         <div>6</div>
         <div>7</div>
         <div>8</div>
         <div>9</div>
         <div>10</div>
         <div>11</div>
-        <div>12</div>
-        -->
+        <div>12</div> -->
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
+
+    
         
     </div>
 

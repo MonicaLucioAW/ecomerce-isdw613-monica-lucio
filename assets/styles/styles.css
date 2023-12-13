@@ -1,9 +1,9 @@
 /**@format */
 h2{
-    color: green;
+    color: rgb(0, 81, 128);
 }
 
 .cell-header{
-    background-color: burlywood;
+    background-color: rgb(222, 148, 135);
     font-weight: bold;
 }
