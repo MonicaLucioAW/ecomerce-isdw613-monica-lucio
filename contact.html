@@ -20,32 +20,22 @@
         h1 {
             color: #007bff;
         }
-
-        .btn-primary {
-            background-color: #007bff;
-            border-color: #007bff;
-        }
-
-        .btn-primary:hover {
-            background-color: #0056b3;
-            border-color: #0056b3;
-        }
     </style>
 </head>
 
-<body>
+<body onload="pageInitialize();">
     <div class="container">
         <h1 class="display-4">Contáctenos</h1>
 
-        <form>
+        <form method="get" action="/processForm.html" onsubmit="return validateForm();">
             <div class="mb-3">
                 <label for="nombre" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="nombre">
+                <input id="name" class="form-control" placeholder="Ingrese el nombre" type="text" onchange="changeInput();" />
             </div>
 
             <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email">
+                <input id="email" class="form-control" placeholder="Ingrese un correo electrónico" type="email" onkeydown="OnKeyDownEvent();" />
             </div>
 
             <div class="mb-3">
@@ -55,14 +45,113 @@
 
             <div class="mb-3">
                 <label for="comentario" class="form-label">Comentario</label>
-                <textarea class="form-control" id="comentario" rows="5"></textarea>
+                <textarea class="form-control" id="comentario" placeholder="Ingrese un comentario" rows="5"></textarea>
             </div>
 
-            <button type="button" class="btn btn-primary">Enviar</button>
+            <div class="mb-3">
+                <label>Sistemas Operativos</label>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="windows" name="os" value="Windows">
+                    <label class="form-check-label" for="windows">Windows</label>
+                </div>
+
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="macos" name="os" value="Macos">
+                    <label class="form-check-label" for="macos">Macos</label>
+                </div>
+
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="linux" name="os" value="linux">
+                    <label class="form-check-label" for="linux">Linux</label>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label>Método de Pago</label>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" id="creditcard" name="paymentMethod" value="creditcard">
+                    <label class="form-check-label" for="creditcard">Tarjeta de Crédito</label>
+                </div>
+
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" id="paypal" name="paymentMethod" value="paypal">
+                    <label class="form-check-label" for="paypal">Paypal</label>
+                </div>
+
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" id="bitcoin" name="paymentMethod" value="bitcoin">
+                    <label class="form-check-label" for="bitcoin">Bitcoin</label>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="deliveryAddress">Dirección de Entrega</label>
+                <select id="deliveryAddress" class="form-select">
+                    <option>Casa</option>
+                    <option>Oficina</option>
+                    <option>Otro</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="clave">Clave</label>
+                <input id="clave" class="form-control" type="password" placeholder="Ingrese la Clave" />
+            </div>
+
+            <div class="mb-3">
+                <label for="invoice">Factura</label>
+                <input type="file" id="invoice" class="form-control">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Enviar</button>
         </form>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <button onclick="agregarParrafo();" class="btn btn-secondary">Agregar Párrafo</button>
+    <button onclick="this.innerHTML=Date();" class="btn btn-info">Click Me</button>
+    <br />
+    <img onmouseover="changeStyle(this,'300px' ); changeImage(this, 'assets/imagenes/atari.jpg');"
+        onmouseout="changeStyle(this, '200px'); changeImage(this, 'assets/imagenes/snes.jpg');"
+        src="assets/imagenes/nintendo.jpg" width="200px" class="img-fluid" />
+
+    <script>
+        function validateForm() {
+            var inputAge = document.getElementById('Age');
+            if (isNaN(inputAge.value) || inputAge.value < 0 || inputAge.value > 100) {
+                return false;
+            }
+            return true;
+        }
+
+        function changeImage(element, imagesrc) {
+            element.src = imagesrc;
+        }
+
+        function changeStyle(element, newsize) {
+            element.style.width = newsize;
+        }
+
+        function agregarParrafo() {
+            var parrafo = document.createElement("p");
+            var texto = document.createTextNode("Este párrafo fue creado dinámicamente");
+            parrafo.appendChild(texto);
+            document.body.appendChild(parrafo);
+        }
+
+        function pageInitialize() {
+            console.log('pageInitialize...');
+        }
+
+        function changeInput() {
+            console.log('changeInput...');
+        }
+
+        function OnKeyDownEvent() {
+            console.log('OnKeyDownEvent...');
+        }
+    </script>
 </body>
 
 </html>
+
