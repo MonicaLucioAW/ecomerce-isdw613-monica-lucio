@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Sample</title>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.css" />
+
+    </head>
+    <body>
+        <div id="mycontent" class"myclass">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum eum ratione fugiat doloremque animi nihil? Ad architecto nam ex deleniti et maiores aspernatur quo culpa? Eum labore aperiam et facere.
+
+        </div>
+        <button onclick="hidecontent ()">Ocultar</button>
+
+        <div id="mysecondcontent" style="border: 2px solid red">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque saepe iste asperiores accusantium. Molestiae, id a sequi, qui cum sed perspiciatis quis sint est sapiente iure eligendi optio accusantium pariatur!
+
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.js"></script>
+
+        <script>
+            $("#mysecondcontent").mouseenter(function (){
+                $(this).css("color" ,"blue")
+            });
+
+            $("#mysecondcontent").mouseenter(function (){
+                $(this).css("color" ,"black")
+            });
+
+            function hidecontent(){
+                //document.getElementById
+                //$(selector).action()
+                // $("#mycontent").hide();
+                //$(".myclass").hide(); document.getElementsByClassName
+                $("div").hide();
+
+            }
+            $(document).ready (function (){
+                console.log("page is ready");
+
+
+            });
+
+            $("#btnHide").click(function () {
+                $(this).text(Oculto);
+                hidecontent();
+
+            });
+        </script>
+    </body>
+</html>

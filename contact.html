@@ -114,13 +114,20 @@
     <img onmouseover="changeStyle(this,'300px' ); changeImage(this, 'assets/imagenes/atari.jpg');"
         onmouseout="changeStyle(this, '200px'); changeImage(this, 'assets/imagenes/snes.jpg');"
         src="assets/imagenes/nintendo.jpg" width="200px" class="img-fluid" />
-
     <script>
         function validateForm() {
-            var inputAge = document.getElementById('Age');
+            //var inputName = document.getElementById("name");
+
+            var inputAge = document.getElementById('age');
+            /*
+            if (inputName.value == '') {
+                return false;
+            }*/
+
             if (isNaN(inputAge.value) || inputAge.value < 0 || inputAge.value > 100) {
                 return false;
             }
+
             return true;
         }
 
@@ -134,7 +141,7 @@
 
         function agregarParrafo() {
             var parrafo = document.createElement("p");
-            var texto = document.createTextNode("Este párrafo fue creado dinámicamente");
+            var texto = document.createTextNode("Este parrafo fue creado dinamicamente");
             parrafo.appendChild(texto);
             document.body.appendChild(parrafo);
         }
@@ -151,7 +158,7 @@
             console.log('OnKeyDownEvent...');
         }
     </script>
+
 </body>
 
 </html>
-
